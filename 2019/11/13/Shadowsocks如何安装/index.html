@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="blog of a coder"/>
+  <meta name="description" content="Shadowsocks如何安装"/>
 
 
 
+
+  <meta name="keywords" content="linux," />
 
 
 
@@ -30,16 +32,18 @@
 
 
 
-<link rel="canonical" href="https://kiancyc.github.io/tags/golang/"/>
+<link rel="canonical" href="https://kiancyc.github.io/2019/11/13/Shadowsocks如何安装/"/>
 
 
-<meta name="description" content="blog of a coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Martin Cai">
-<meta property="og:url" content="https:&#x2F;&#x2F;kiancyc.github.io&#x2F;tags&#x2F;golang&#x2F;index.html">
+<meta name="description" content="安装shadowsocks并打开渡端口管理。">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shadowsocks如何安装">
+<meta property="og:url" content="https:&#x2F;&#x2F;kiancyc.github.io&#x2F;2019&#x2F;11&#x2F;13&#x2F;Shadowsocks%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85&#x2F;index.html">
 <meta property="og:site_name" content="Martin Cai">
-<meta property="og:description" content="blog of a coder">
+<meta property="og:description" content="安装shadowsocks并打开渡端口管理。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-13T03:24:03.602Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -65,11 +69,7 @@
 
 
 
-    <title>
-  
-    golang - Martin Cai
-  
-</title>
+    <title> Shadowsocks如何安装 - Martin Cai </title>
   </head>
 
   <body>
@@ -109,88 +109,88 @@
       </header>
       <div id="content">
         
-  
-<div id="primary">
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title tag">
-          <h2 class="archive-name">golang</h2>
-        </div>
-      
-    
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Shadowsocks如何安装
+        
+      </h1>
+
+      <time class="post-time">
+          Nov 13 2019
+      </time>
+    </header>
+
+
 
     
-      
+            <div class="post-content">
+            <p>安装shadowsocks并打开渡端口管理。</p>
+<a id="more"></a>
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2019-11-07
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2019/11/07/VScode%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95golang/" class="archive-post-link">
-            VScode如何调试golang
-          </a>
-        </span>
-      </div>
-    
-      
+<p>关闭防火墙</p>
+<blockquote>
+<p>systemctl stop firewalld</p>
+</blockquote>
+<p>安装</p>
+<blockquote>
+<p>yum install python-setuptools &amp;&amp; easy_install pip<br>pip install git+<a href="https://github.com/shadowsocks/shadowsocks.git@master" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks.git@master</a></p>
+</blockquote>
+<p>启动</p>
+<blockquote>
+<p>ssserver -p 443 -k password -m aes-256-cfb –user nobody -d start</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>ssserver -p 8000 -k 8000 -m aes-256-cfb –manager-address 0.0.0.0:7999 -d start</p>
+</blockquote>
 
-      <div class="archive-post">
-        <span class="archive-post-time">
+            </div>
           
-            2019-11-07
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2019/11/07/Golang%E5%AE%89%E8%A3%85golang.org%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%8C%85/" class="archive-post-link">
-            golang安装golang.org/x下面的包
-          </a>
-        </span>
-      </div>
-    
-      
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2019-11-07
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2019/11/07/Golang%E5%9C%A8Linux%E4%B8%8B%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/" class="archive-post-link">
-            golang在Linux下如何安装
-          </a>
-        </span>
-      </div>
     
-      
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/linux/">linux</a>
+		  
+		</div>
+		
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2019-11-07
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2019/11/07/Golang%E5%A5%BD%E7%94%A8%E7%9A%84%E5%8C%85/" class="archive-post-link">
-            Golang好用的包
-          </a>
-        </span>
-      </div>
+        
+        
+  <nav class="post-nav">
     
-  </section>
- </div>
-
-  
-  <nav class="pagination">
+      <a class="prev" href="/2019/11/13/Python3%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Python3如何安装</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
+    
+      <a class="next" href="/2019/11/13/CentOS%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/">
+        <span class="next-text nav-default">CentOS开启自动登录</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+        
+  <div class="comments" id="comments">
+    
+  </div>
 
+
+      </footer>
+    
+  </article>
+
+    </div>
 
       </div>
 
