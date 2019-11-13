@@ -35,15 +35,15 @@
 <link rel="canonical" href="https://kiancyc.github.io/2019/11/13/Supervisor打开WebUI/"/>
 
 
-<meta name="description" content="edit supervisord.conf1234[inet_http_server]    ; inet (TCP) server disabled by defaultport=*:9001           ; (ip_address:port specifier, *:port for all iface); username=admin      ; (default is no us">
+<meta name="description" content="edit supervisord.conf 1234[inet_http_server]    ; inet (TCP) server disabled by defaultport=*:9001           ; (ip_address:port specifier, *:port for all iface); username=admin      ; (default is no u">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Supervisor打开WebUI">
 <meta property="og:url" content="https:&#x2F;&#x2F;kiancyc.github.io&#x2F;2019&#x2F;11&#x2F;13&#x2F;Supervisor%E6%89%93%E5%BC%80WebUI&#x2F;index.html">
 <meta property="og:site_name" content="Martin Cai">
-<meta property="og:description" content="edit supervisord.conf1234[inet_http_server]    ; inet (TCP) server disabled by defaultport=*:9001           ; (ip_address:port specifier, *:port for all iface); username=admin      ; (default is no us">
+<meta property="og:description" content="edit supervisord.conf 1234[inet_http_server]    ; inet (TCP) server disabled by defaultport=*:9001           ; (ip_address:port specifier, *:port for all iface); username=admin      ; (default is no u">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-13T03:34:14.557Z">
+<meta property="og:updated_time" content="2019-11-13T03:35:08.187Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -128,11 +128,14 @@
 
     
             <div class="post-content">
-            <h3 id="edit-supervisord-conf"><a href="#edit-supervisord-conf" class="headerlink" title="edit supervisord.conf"></a>edit supervisord.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[inet_http_server]    ; inet (TCP) server disabled by default</span><br><span class="line">port=*:9001           ; (ip_address:port specifier, *:port for all iface)</span><br><span class="line">; username=admin      ; (default is no username (open server))</span><br><span class="line">; password=password   ; (default is no password (open server))</span><br></pre></td></tr></table></figure>
+            <p>edit supervisord.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[inet_http_server]    ; inet (TCP) server disabled by default</span><br><span class="line">port=*:9001           ; (ip_address:port specifier, *:port for all iface)</span><br><span class="line">; username=admin      ; (default is no username (open server))</span><br><span class="line">; password=password   ; (default is no password (open server))</span><br></pre></td></tr></table></figure>
 
-<h3 id="restart-supervisor"><a href="#restart-supervisor" class="headerlink" title="restart supervisor"></a>restart supervisor</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo supervisorctl reload</span><br></pre></td></tr></table></figure>
+<p>restart supervisor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo supervisorctl reload</span><br></pre></td></tr></table></figure>
 
-<h3 id="add-log"><a href="#add-log" class="headerlink" title="add log"></a>add log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[program:xxx]</span><br><span class="line">redirect_stderr=true</span><br></pre></td></tr></table></figure>
+<p>add log</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[program:xxx]</span><br><span class="line">redirect_stderr=true</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
             </div>
